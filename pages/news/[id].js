@@ -1,5 +1,8 @@
 import Footer from "@components/Footer";
 import { useRouter } from "next/router";
+import Link from "next/link";
+
+import styles from "../news/News.module.css";
 export default function NewsDetail({ news }) {
   const router = useRouter();
 
@@ -9,7 +12,13 @@ export default function NewsDetail({ news }) {
   return (
     <div>
       <main>
-        <p>{news.id}</p>
+        <p
+          className={`${
+            news.tag == "breaking" ? styles.breaking : styles.archive
+          }`}
+        >
+          {news.tag} news
+        </p>
         <h3>{news.title}</h3>
         <p> {news.content} </p>
       </main>
