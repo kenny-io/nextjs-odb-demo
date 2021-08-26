@@ -1,23 +1,28 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Head from "next/head";
+import Footer from "@components/Footer";
+import Link from "next/link";
+
+import styles from "../pages/Home.module.css";
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Next.js Starter!</title>
+        <title>Breaking News 🚀</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <Link href={`/news`}>
+          <button type="button" className={styles.button}>
+            <a>
+              <h2>Read Our News 🚀</h2>
+            </a>
+          </button>
+        </Link>
       </main>
 
       <Footer />
     </div>
-  )
+  );
 }

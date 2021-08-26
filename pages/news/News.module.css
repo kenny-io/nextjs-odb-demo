@@ -4,6 +4,7 @@
   transition: 0.3s;
   width: 45rem;
   margin: 0.5rem;
+  border-radius: 15px;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -18,4 +19,15 @@
 
 .excerpt {
   color: rgb(0, 83, 238);
+}
+
+.number {
+  margin-right: 8px;
+}
+
+.breaking {
+  color: red;
+}
+.archive {
+  color: rgb(121, 118, 118);
 }

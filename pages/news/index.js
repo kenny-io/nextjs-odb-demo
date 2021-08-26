@@ -13,11 +13,19 @@ export default function NewsHome({ news }) {
               <Link href={`/news/${article.id}`}>
                 <a>
                   <h4>
+                    <span className={styles.number}>{article.id}.</span>
                     <b>{article.title}</b>
                   </h4>
                 </a>
               </Link>
               <p>{article.excerpt}</p>
+              <p
+                className={`${
+                  article.tag == "breaking" ? styles.breaking : styles.archive
+                }`}
+              >
+                {article.tag}
+              </p>
             </div>
           </div>
         ))}

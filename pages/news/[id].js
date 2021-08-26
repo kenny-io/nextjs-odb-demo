@@ -9,6 +9,7 @@ export default function NewsDetail({ news }) {
   return (
     <div>
       <main>
+        <p>{news.id}</p>
         <h3>{news.title}</h3>
         <p> {news.content} </p>
       </main>
